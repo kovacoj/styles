@@ -4,14 +4,14 @@ Small, reusable styles for MATLAB exports, Matplotlib figures, and Jupyter noteb
 
 ## Files
 
-- `style.m` sets session-wide MATLAB defaults through `groot`.
-- `presentation.mplstyle` is for final Matplotlib exports with LaTeX rendering.
-- `notebook.mplstyle` is a lighter Matplotlib style for quick Jupyter work.
-- `callouts.css` adds colored callout boxes for notebook HTML output.
+- [`style.m`](./style.m) sets session-wide MATLAB defaults through `groot`.
+- [`presentation.mplstyle`](./presentation.mplstyle) is for final Matplotlib exports with LaTeX rendering.
+- [`notebook.mplstyle`](./notebook.mplstyle) is a lighter Matplotlib style for quick Jupyter work.
+- [`callouts.css`](./callouts.css) adds colored callout boxes for notebook HTML output.
 
 ## Python / Matplotlib
 
-Use `presentation.mplstyle` when you want LaTeX-rendered labels in exported figures.
+Use [`presentation.mplstyle`](./presentation.mplstyle) when you want LaTeX-rendered labels in exported figures.
 
 ```python
 from pathlib import Path
@@ -28,9 +28,9 @@ ax.set_ylabel(r"$y$")
 fig.savefig("figure.pdf", bbox_inches="tight")
 ```
 
-`presentation.mplstyle` enables `text.usetex` and loads `amsmath`, `amssymb`, `siunitx`, and `physics`.
+[`presentation.mplstyle`](./presentation.mplstyle) enables `text.usetex` and loads `amsmath`, `amssymb`, `siunitx`, and `physics`.
 
-Use `notebook.mplstyle` for quick plotting in Jupyter when you do not want a LaTeX dependency.
+Use [`notebook.mplstyle`](./notebook.mplstyle) for quick plotting in Jupyter when you do not want a LaTeX dependency.
 
 ```python
 from pathlib import Path
@@ -59,7 +59,7 @@ exportgraphics(gcf, 'figure.pdf', 'ContentType', 'vector');
 
 ## Jupyter Callouts
 
-Load `callouts.css` once in a notebook:
+Load [`callouts.css`](./callouts.css) once in a notebook:
 
 ```python
 from pathlib import Path
@@ -86,5 +86,3 @@ HTML("""
 ```
 
 Available variants: `callout-note`, `callout-tip`, `callout-important`, `callout-warning`, and `callout-caution`.
-
-See `callouts-demo.ipynb` for a small notebook preview.
