@@ -1,3 +1,4 @@
+/* Colored callouts for HTML rendered in Jupyter notebooks. */
 .callout {
     border: 1px solid;
     border-radius: 6px;
@@ -34,6 +35,28 @@
     color: #1f2328;
 }
 
+.callout-content p {
+    margin: 0 0 12px;
+}
+
+.callout-content > :first-child {
+    margin-top: 0;
+}
+
+.callout-content > :last-child {
+    margin-bottom: 0;
+}
+
+.callout-content ul,
+.callout-content ol {
+    margin: 0 0 12px;
+    padding-left: 24px;
+}
+
+.callout-content li + li {
+    margin-top: 4px;
+}
+
 .callout-content strong {
     font-weight: 600;
 }
@@ -48,6 +71,45 @@
     border-radius: 3px;
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     font-size: 12px;
+}
+
+.callout-content pre {
+    margin: 0 0 12px;
+    padding: 12px;
+    overflow-x: auto;
+    border-radius: 6px;
+    background-color: rgba(175, 184, 193, 0.12);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.callout-content pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+}
+
+.callout-content table {
+    width: 100%;
+    margin: 0 0 12px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.callout-content th,
+.callout-content td {
+    padding: 6px 8px;
+    border-top: 1px solid rgba(31, 35, 40, 0.12);
+    text-align: left;
+    vertical-align: top;
+}
+
+.callout-content thead th {
+    border-top: 0;
+    border-bottom: 1px solid rgba(31, 35, 40, 0.12);
+    font-weight: 600;
 }
 
 /* GitHub Note (blue) */
@@ -92,18 +154,18 @@
     background-color: #8250df;
 }
 
-/* GitHub Warning (orange/red) */
+/* GitHub Warning (amber) */
 .callout-warning {
-    border-color: #d1242f;
-    background-color: #fef2f2;
+    border-color: #9a6700;
+    background-color: #fff8c5;
 }
 
 .callout-warning .callout-header {
-    color: #d1242f;
+    color: #9a6700;
 }
 
 .callout-warning .callout-icon {
-    background-color: #d1242f;
+    background-color: #9a6700;
 }
 
 /* GitHub Caution (red) */
